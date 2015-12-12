@@ -1,0 +1,56 @@
+    <%= render 'dashboard/navigation'%>
+    <%= render 'dashboard/header'%>
+    <%= render 'dashboard/about_us'%>
+    <%= render 'dashboard/services'%>
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Lorem ipsum</h1>
+        </div>
+    </aside>
+    <!-- Portfolio -->
+    <%= render 'dashboard/portfolio'%>
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>The buttons below are impossible to resist.</h3>
+                    <%= link_to "Click Me!", root_path , class: "btn btn-lg btn-light"%>
+                    <%= link_to "Look at Me!", root_path, class: "btn btn-lg btn-dark" %>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <%= render 'dashboard/footer'%>
+<!-- Inline Script for sidebar -->
+<script>
+ // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>

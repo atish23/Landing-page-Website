@@ -1,0 +1,20 @@
+<%= link_to "Add Blogs", new_admin_blog_path,:class=>"btn btn-success"%>
+<table class="table table-condensed">
+	<tr class="success">
+		<td>Id</td>
+		<td>Title</td>
+		<td>Description</td>
+		<td>Action</td>
+	</tr>
+	<% @blogs.each do |blog| %>
+	<tr class="warning">
+		<td><%= blog.id %></td>
+		<td><%= blog.title%></td>
+		<td><%= truncate(blog.description)%></td>
+		<td><%=link_to "Show",blog ,:class=>"btn btn-primary"%>
+			<%=link_to "Edit",edit_admin_blog_path(blog) ,:class=>"btn btn-primary"%> 
+		 	<%= link_to 'Destroy',  { action: :destroy, id: blog.id }, method: :delete, data: { confirm: 'Are you sure?' },:class=>"btn btn-warning" %></td>
+	</tr>
+<%end%>
+</table>
+
