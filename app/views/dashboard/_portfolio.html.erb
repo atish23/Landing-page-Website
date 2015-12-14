@@ -13,27 +13,27 @@
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/assets/portfolio-2.jpg">
+                                    <%= image_tag("portfolio-2.jpg", alt: "File Name Fancy",class: "img-portfolio img-responsive" )%>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/assets/portfolio-3.jpg">
+                                    <%= image_tag("portfolio-3.jpg", alt: "File Name Fancy",class: "img-portfolio img-responsive" )%>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="/assets/portfolio-4.jpg">
+                                    <%= image_tag("portfolio-4.jpg", alt: "File Name Fancy",class: "img-portfolio img-responsive" )%>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <%= link_to "View More Items", "#",class: "btn btn-dark" %> 
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
