@@ -5,35 +5,18 @@
                     <h2>Our Work</h2>
                     <hr class="small">
                     <div class="row">
+                        <%@projects.each do |project|%>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                    <%= image_tag("portfolio-1.jpg", alt: "File Name Fancy",class: "img-portfolio img-responsive" )%>
+                                    <%= image_tag(project.avatar.url, alt: "Image1",class: "img-portfolio img-responsive" )%>
+                                    <strong><%= project.name%></strong>
                             </div>
+
                         </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <%= image_tag("portfolio-2.jpg", alt: "File Name Fancy",class: "img-portfolio img-responsive" )%>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <%= image_tag("portfolio-3.jpg", alt: "File Name Fancy",class: "img-portfolio img-responsive" )%>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <%= image_tag("portfolio-4.jpg", alt: "File Name Fancy",class: "img-portfolio img-responsive" )%>
-                                </a>
-                            </div>
-                        </div>
+                        <%end%>
                     </div>
                     <!-- /.row (nested) -->
-                    <%= link_to "View More Items", "#",class: "btn btn-dark" %> 
+                    <%#= link_to "View More Items", "#",class: "btn btn-dark" %> 
                 </div>
                 <!-- /.col-lg-10 -->
             </div>

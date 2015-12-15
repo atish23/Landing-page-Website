@@ -1,4 +1,14 @@
+<div id="container">
 <div class="jumbotron">
   <h1><%= @blog.title %></h1>
-  <p><%=@blog.description%></p>
+  <%= image_tag @blog.avatar.url(:thumb) %>
+  <p><%=@blog.body%></p>
+  	<div id="comments">
+		<h2><%= @blog.comments.count %> Comments</h2>
+		<%= render @blog.comments %>
+
+		<h3>Add a comment:</h3>
+		<%= render "comments/form" %>
+	</div>
+</div>
 </div>

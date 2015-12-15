@@ -8,10 +8,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'devise', '~> 3.5', '>= 3.5.3'
+gem 'paperclip', '~> 4.3', '>= 4.3.2'
+gem 'rails_admin', '~> 0.8.1'
 
 group :development, :test do
   	gem 'byebug'
-  	gem 'sqlite3'
+  	gem 'sqlite3', '~> 1.3', '>= 1.3.11'
   	gem 'web-console', '~> 2.0'
   	gem 'spring'
 end
