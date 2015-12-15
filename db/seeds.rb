@@ -3,5 +3,5 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+    contact = Contact.create( :contact_no=> '+91-8793857791' ,:company_email => 'aatish93maske@gmail.com')
 #   Mayor.create(name: 'Emanuel', city: cities.first)
